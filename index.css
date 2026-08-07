@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: flex-start; /* Distribui os placares no topo e botão embaixo */
+    flex-direction: column;      /* Empilha os placares e o botão verticalmente */
+    align-items: center;          /* Centraliza o botão na horizontal */
+
+    background-color: rgb(20, 20, 73);
+    border-radius: 8px;
+
+    margin: 10px 200px;
+    padding: 15px 0;              /* Adiciona espaçamento interno para o botão não colar nas bordas */
+    height: 230px;
+    box-sizing: border-box;       /* Garante que o padding não aumente a altura total de 250px */
+}
+
+/* Container que agrupa os blocos HOME e GUEST */
+.scores-wrapper {
+    display: flex;                /* Ativa o Flexbox para alinhar os filhos (HOME e GUEST) lado a lado */
+    justify-content: space-around; /* Distribui o espaço por igual ao redor dos blocos HOME e GUEST */
+    width: 100%;                  /* Ocupa toda a largura disponível dentro do container pai */
+}
+
+/* Títulos "HOME" e "GUEST" */
+.big-text {
+    color: white;                 /* Cor do texto em branco */
+    font-family: Roboto, normal;  /* Define a fonte Roboto (ou a padrão do navegador caso não carregue) */
+    font-size: 30px;              /* Tamanho da fonte dos títulos */
+    text-align: center;           /* Alinha o texto no centro do seu próprio bloco */
+
+    margin-top: 0;                /* Remove a margem superior padrão que o HTML aplica em títulos <h3> */
+    margin-bottom: -5px;          /* Usa margem negativa para aproximar o título da caixa preta */
+}
+
+/* Caixa preta dos placares (números) */
+#points-home, #points-guest {
+    background-color: black;    /* Cor de fundo preta */
+    color: #ff2222;             /* Um vermelho LED bem vívido */
+
+    height: 90px;                 /* Trava a altura da caixa em exatos 90 pixels */
+    width: 110px;                 /* Trava a largura da caixa em exatos 110 pixels */
+    margin: 10px auto 0 auto;     /* Margem: 10px no topo, 0 embaixo, e "auto" nas laterais para centralizar */
+
+    display: flex;                /* Ativa o Flexbox DENTRO da própria caixa preta */
+    justify-content: center;      /* Centraliza o número na horizontal dentro da caixa */
+    align-items: center;          /* Centraliza o número na vertical dentro da caixa */
+    
+    font-size: 120px;                              /* Tamanho grande para o número do placar */
+    font-family: 'VT323', monospace;               /* Define a fonte de LED digital */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);  /* Efeito de brilho de luz LED */
+
+    border-radius: 5px;              /* Arredonda levemente os 4 cantos da caixa preta */
+}
+
+/* Container dos botões de pontuação (+1, +2, +3) */
+.add-points {
+    display: flex;                /* Ativa o Flexbox para colocar os itens "+1", "+2", "+3" lado a lado */
+    justify-content: space-around; /* Espaça uniformemente os itens de pontuação */
+
+    margin-top: 10px;
+}
+
+.points-btn {
+    background-color: rgb(20, 20, 73);
+    color: white;
+
+    font-family: 'VT323', monospace;
+
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+
+    /* --- CONTROLE DO TAMANHO DA CAIXA (BOTÃO) --- */
+    width: 25px;          /* Largura de cada botão */
+    height: 25px;         /* Altura de cada botão */
+
+    /* --- CONTROLE DO TAMANHO DO NÚMERO/TEXTO --- */
+    font-size: 18px;      /* Tamanho dos números (+1, +2, +3) */
+
+    /* --- ALINHAMENTO DO NÚMERO DENTRO DA CAIXA --- */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização do botão de reiniciar */
+#restart-btn {
+    padding: 6px 16px;            /* Espaçamento interno: 6px em cima/baixo e 16px nas laterais */
+    
+    font-size: 14px;              /* Tamanho do texto do botão */
+    font-weight: bold;            /* Deixa o texto em negrito */
+    
+    border-radius: 4px;           /* Arredonda levemente os cantos do botão */
+    border: none;                 /* Remove a borda padrão cinza/estranha do HTML */
+    
+    cursor: pointer;              /* Transforma o ponteiro do mouse na "mãozinha" ao passar por cima */
+    
+    background-color: #ffffff;    /* Cor de fundo do botão (branco) */
+    color: rgb(20, 20, 73);       /* Cor do texto do botão (mesmo tom de azul da caixa principal) */
+    
+    margin-top: 10px; /* Ajuste este valor (ex: 0px, 5px, 10px) até ficar como deseja */
+}
