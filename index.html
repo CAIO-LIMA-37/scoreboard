@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=VT323&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="container-1">
-            <div class="scores-wrapper">
-                <div>
-                    <h3 class="big-text">ALIENS</h3>
-                    <p id="points-home">0</p> <!-- Troque class por id para facilitar a seleção -->
-                    <div class="add-points">
-                        <button class="points-btn" onclick="addPoints('home', 1)">+1</button>
-                        <button class="points-btn" onclick="addPoints('home', 2)">+2</button>
-                        <button class="points-btn" onclick="addPoints('home', 3)">+3</button>
-                    </div>
-                </div>
 
-                <div>
-                    <h3 class="big-text">UNICORNS</h3> 
-                    <p id="points-guest">0</p> <!-- Troque class por id para facilitar a seleção -->
-                    <div class="add-points">
-                        <button class="points-btn" onclick="addPoints('guest', 1)">+1</button>
-                        <button class="points-btn" onclick="addPoints('guest', 2)">+2</button>
-                        <button class="points-btn" onclick="addPoints('guest', 3)">+3</button>
-                    </div>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container-1">
+        <div class="scores-wrapper">
+            <div>
+                <h3 class="big-text">ALIEN</h3>
+                <p id="points-home">0</p> <!-- Troque class por id para facilitar a seleção -->
+                <div class="add-points">
+                    <button class="points-btn" onclick="addPoints('home', 1)">+1</button>
+                    <button class="points-btn" onclick="addPoints('home', 2)">+2</button>
+                    <button class="points-btn" onclick="addPoints('home', 3)">+3</button>
                 </div>
             </div>
-            <button id="restart-btn" onclick="restart()">Restart</button>
+
+            <div>
+                <h3 class="big-text">UNICORNS</h3>
+                <p id="points-guest">0</p> <!-- Troque class por id para facilitar a seleção -->
+                <div class="add-points">
+                    <button class="points-btn" onclick="addPoints('guest', 1)">+1</button>
+                    <button class="points-btn" onclick="addPoints('guest', 2)">+2</button>
+                    <button class="points-btn" onclick="addPoints('guest', 3)">+3</button>
+                </div>
+            </div>
         </div>
-        <script src="index.js"></script>
-    </body>
+        <button id="restart-btn" onclick="restart()">Restart</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
 </html>
